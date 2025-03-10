@@ -1,0 +1,110 @@
+{
+    "breadcrumbs.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.formatOnType": true,
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": true,
+    "git.autofetch": true,
+    "window.zoomLevel": 1,
+    "mssql.enableExperimentalFeatures": true,
+    "mssql.enableRichExperiences": true,
+	//salva conexoes definidas
+    "mssql.connections": [
+        {
+            "authenticationType": "Integrated",
+            "connectTimeout": 15,
+            "applicationName": "vscode-mssql",
+            "server": "colossus\\sql2019",
+            "trustServerCertificate": true,
+            "database": "i4pro_next_dev",
+            "encrypt": "Mandatory",
+            "password": ""
+        },
+        {
+            "authenticationType": "Integrated",
+            "connectTimeout": 15,
+            "applicationName": "vscode-mssql",
+            "profileName": "",
+            "server": "ciclope",
+            "database": "",
+            "encrypt": "Mandatory",
+            "trustServerCertificate": true,
+            "password": ""
+        }
+    ],
+    "mssql.enableQueryHistoryCapture": false,
+    "git.openRepositoryInParentFolders": "never",
+	//faz com que a quebra de linha siga a indentacao da linha de cima
+    "editor.wrappingIndent": "indent",
+    "mssql.objectExplorer.groupBySchema": false,
+	//salva comandos pre definidos
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.runSpHelp",
+            "sequence": [
+                "editor.action.clipboardCopyAction",
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "snippet": "sp_help '${TM_SELECTED_TEXT}'"
+                    }
+                },
+                "mssql.runCurrentStatement",
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "command": "multiCommand.runSpHelpText",
+            "sequence": [
+                "editor.action.clipboardCopyAction",
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "snippet": "sp_helptext '${TM_SELECTED_TEXT}'"
+                    }
+                },
+                "mssql.runCurrentStatement",
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "command": "multiCommand.runSpSelect",
+            "sequence": [
+                "editor.action.clipboardCopyAction",
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "snippet": "select * from ${TM_SELECTED_TEXT}"
+                    }
+                },
+                "mssql.runCurrentStatement",
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "command": "multiCommand.runSpConsulta",
+            "sequence": [
+                "editor.action.clipboardCopyAction",
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "snippet": "sp_consulta '${TM_SELECTED_TEXT}'"
+                    }
+                },
+                "mssql.runCurrentStatement",
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+    ],
+    //opcionais
+    "editor.tabSize": 4,
+    //citar encoding-utf-8
+}

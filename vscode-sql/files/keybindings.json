@@ -1,0 +1,46 @@
+[
+  {
+    "key": "f5",
+    "command": "mssql.runCurrentStatement",
+    "when": "editorTextFocus && editorLangId == 'sql'"
+  },
+  {
+    "key": "f5",
+    "command": "mssql.runQuery",
+    "when": "editorTextFocus && editorLangId == 'sql'"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.closePanel",
+    "when": "editorTextFocus && editorLangId == 'sql'"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "mssql.revealQueryResultPanel",
+    "when": "editorTextFocus && editorLangId == 'sql'"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "mssql.newQuery"
+  },
+  {
+    "key": "alt+f1",
+    "command": "multiCommand.runSpHelp",
+    "when": "editorTextFocus && editorLangId == 'sql'"
+  },
+  {
+    "key": "ctrl+f1",
+    "command": "multiCommand.runSpHelpText",
+    "when": "editorTextFocus && editorLangId == 'sql'"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "multiCommand.runSpSelect",
+    "when": "editorTextFocus && editorLangId == 'sql'"
+  },
+  {
+    "key": "ctrl+4",
+    "command": "multiCommand.runSpConsulta",
+    "when": "editorTextFocus && editorLangId == 'sql'"
+  }
+]
